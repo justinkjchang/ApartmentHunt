@@ -6,9 +6,9 @@ var app = angular.module('myApp', [
   'ngRoute',
   'myApp.filters',
   'myApp.services',
+  'myApp.factories',
   'myApp.directives',
-  'myApp.controllers',
-  'ngCsvImport'
+  'myApp.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
