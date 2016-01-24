@@ -17,7 +17,8 @@ app.factory('apartmentFactory', function($http) {
 				'X-Parse-Application-Id': "XTdVNu7dQLn5oxIuhDAKJOur0LfNExmApSEsPWNM",
                 'X-Parse-REST-API-Key': "A9gFCEthQLn32F06m7ziZQ6BSqGZ2NyLy9rP1KYN",
                 'Content-Type': 'application/json'
-			}
+			},
+			cache: true
 		});
 		
 	};
