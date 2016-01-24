@@ -1,4 +1,7 @@
-# simple-angular-seed — a very basic and simple seed for AngularJS apps
+# Apartment Hunt Visualization
+
+This project is a simple web application that will help visualize the pros and cons of various apartments, including distance to work, rent price per month, sq. ft., etc. It's built using [AngularJS](http://angularjs.org/), and took advantage of [simple angular seed](https://github.com/reinaldo13/simple-angular-seed), which is a basic skeleton for general AngularJS applications.
+
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 You can use it to quickly start your angular webapp projects.
@@ -9,25 +12,28 @@ The seed app doesn't do much, just shows how to wire two controllers and views t
 
 ## Getting Started
 
-To get you started you can simply clone the angular-seed repository and install the dependencies:
+Simply clone the ApartmentHunt repository
+
+```
+git clone https://github.com/justinkjchang/ApartmentHunt.git
+cd ApartmentHunt
+```
 
 ### Prerequisites
 
-You need git to clone the simple-angular-seed repository. You can get it from
+You need git to clone the repository. You can get it from
 [http://git-scm.com/](http://git-scm.com/).
-
-### Clone angular-seed
-
-Clone the angular-seed repository using git:
-
-```
-git clone https://github.com/reinaldo13/simple-angular-seed.git
-cd simple-angular-seed
-```
 
 ### Run the Application
 
 You can either run your app locally or host it using [github pages](https://pages.github.com/)
+
+#### Note:
+
+Some ajax calls are done with angular, and as a result, the project needs to be hosted on a web server.
+One option would be to use [http-server](https://www.npmjs.com/package/http-server)
+Install: npm install -g http-server
+Run: http-server $dir
 
 ## Directory Layout
 
@@ -40,6 +46,7 @@ You can either run your app locally or host it using [github pages](https://page
         app.js          --> application
         controllers.js  --> application controllers
         directives.js   --> application directives
+        factories.js    --> application factories
         filters.js      --> custom angular filters
         services.js     --> custom angular services
       partials/             --> angular view partials (partial html templates)
@@ -49,6 +56,7 @@ You can either run your app locally or host it using [github pages](https://page
     test/               --> test config and source files (coming soon!)
     
 ## Testing
+
 Coming Soon!
 
 ## Contact
