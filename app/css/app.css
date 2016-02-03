@@ -29,6 +29,15 @@
   padding: 0;
 }
 
-.apartment-details {
-  
+.apartment-data {
+  font-size: 18px;
+}
+
+.apartment-data a {
+  color: #555;
+}
+
+.apartment-data a:hover {
+  text-decoration: none;
+  color: #999;
 }
