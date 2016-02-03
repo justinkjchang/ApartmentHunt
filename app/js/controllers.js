@@ -14,7 +14,7 @@ angular.module('myApp.controllers', [])
 		function init() {
 			apartmentFactory.getApartments().success(function(response) {
 				// set apartments on the scope so it can be seen by the view
-				$scope.apartments = response.results;
+				$scope.apartments = response;
 			}).error(function(response) {
 				alert("Error: " + response.error);
 			});

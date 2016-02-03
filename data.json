@@ -1,0 +1,24 @@
+{
+	"Apartments" : {
+		"apartment1" : {
+			"Address" : "123 Street",
+			"Price" : "1700"
+		}, 
+		"apartment2" : {
+			"Address" : "321 Street",
+			"Price" : "1500"
+		},
+		"apartment3" : {
+			"Address" : "213 Street",
+			"Price" : "1600"
+		},
+		"apartment4" : {
+			"Address" : "222 Street",
+			"Price" : "2000"
+		},
+		"apartment5" : {
+			"Address" : "333 Street",
+			"Price" : "2100"
+		}
+	}
+}

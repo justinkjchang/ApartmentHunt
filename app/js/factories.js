@@ -12,10 +12,8 @@ app.factory('apartmentFactory', function($http) {
 		// // usually make ajax call here to get the data e.g. apartment data
 		var apartments = {};
 
-		return $http.get("https://api.parse.com/1/classes/Apartment", {
+		return $http.get("https://apartmenthunt.firebaseio.com/Apartments.json", {
 			headers: {
-				'X-Parse-Application-Id': "XTdVNu7dQLn5oxIuhDAKJOur0LfNExmApSEsPWNM",
-                'X-Parse-REST-API-Key': "A9gFCEthQLn32F06m7ziZQ6BSqGZ2NyLy9rP1KYN",
                 'Content-Type': 'application/json'
 			},
 			cache: true
