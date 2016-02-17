@@ -7,7 +7,7 @@ angular.module('myApp.directives', [])
 			elm.text(version);
 	};
 }])
-	.directive('apartmentData', function () {
+	.directive('apartmentData', ['$rootScope', function ($rootScope) {
 	    return {
 	        restrict: 'E', // E = element, A = attribute, C = class, M = comment      
 	        replace: true,   
@@ -19,8 +19,10 @@ angular.module('myApp.directives', [])
 
 	        // controller: controllerFunction, // Embed a custom controller in the directive
 	        link: function($scope, element, attrs) { 
-	        	
+
 				$scope.changedValue = function(selectedApartment) {
+					// set the current apartment in the root scope
+					$rootScope.currApartment = selectedApartment;
 					console.log(selectedApartment);
 				}
 	        	// DOM manipulation
@@ -31,4 +33,4 @@ angular.module('myApp.directives', [])
 	        	// });
 	        } 
 	    };
-	});
+	}]);

@@ -5,8 +5,13 @@
 var controllers = {};
 
 angular.module('myApp.controllers', [])
-	.controller('MyCtrl1', ['$scope', '$http', 'apartmentFactory', function($scope, $http, apartmentFactory) {
+	.controller('MyCtrl1', ['$scope', '$http', 'apartmentFactory', '$rootScope', function($scope, $http, apartmentFactory, $rootScope) {
 		$scope.apartments = [];
+
+		// watch for if the current apartment changes
+		$rootScope.$watch('currApartment', function(currApartment) {
+			console.log("new currApartment: " + JSON.stringify(currApartment));
+		});
 
 		init();
 
