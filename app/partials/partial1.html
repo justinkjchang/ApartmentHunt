@@ -1,4 +1,12 @@
 <p>This is the partial for view 1.</p>
+<div class="row">
+	<div class="col-md-8">
+		<h3>Map</h3>
+		<p>Selected item is: {{ currApartment.Address }}</p>
+	</div>
+	<div class="col-md-4">
+		<!-- custom apartment-data directive with apartments attribute 'apartments' -->
+		<apartment-data apartments='apartments'></apartment-data>
+	</div>
+</div>
 
-<!-- custom apartment-data directive with apartments attribute 'apartments' -->
-<apartment-data apartments='apartments'></apartment-data>
