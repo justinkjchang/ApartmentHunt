@@ -18,13 +18,17 @@ angular.module('myApp.directives', [])
 	        },
 
 	        // controller: controllerFunction, // Embed a custom controller in the directive
-	        link: function ($scope, element, attrs) { 
+	        link: function($scope, element, attrs) { 
+	        	
+				$scope.changedValue = function(selectedApartment) {
+					console.log(selectedApartment);
+				}
 	        	// DOM manipulation
-	        	$scope.$watch('apartments', function(apartments) {
-	        		angular.forEach(apartments, function(apartment, key) {
-	        			element.find("ul").append('<li><a href="#">' + apartment.Address + "</a></li>");
-	        		});
-	        	});
+	        	// $scope.$watch('apartments', function(apartments) {
+	        	// 	angular.forEach(apartments, function(apartment, key) {
+	        	// 		element.find("ul").append('<li><a href="#">' + apartment.Address + "</a></li>");
+	        	// 	});
+	        	// });
 	        } 
 	    };
 	});
