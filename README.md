@@ -23,8 +23,8 @@ You can either run your app locally or host it using [github pages](https://page
 ### Todo
 
 - [&#x2713;] Migrate from ngRoute to ui-router
-- [ ] Show marker address/name on click
-- [ ] Add favourites star
+- `[ ]` Show marker address/name on click
+- `[ ]` Add favourites star
 
 #### Note:
 
