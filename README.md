@@ -22,9 +22,9 @@ You can either run your app locally or host it using [github pages](https://page
 
 ### Todo
 
-- Migrate from ngRoute to ui-router
-- Show marker address/name on click
-- Add favourites star
+- [&#x2713;] Migrate from ngRoute to ui-router
+- [ ] Show marker address/name on click
+- [ ] Add favourites star
 
 #### Note:
 
@@ -43,6 +43,7 @@ Run: http-server $dir
       js/                        --> javascript files
         angular-google-maps.js     --> angular google maps directive
         angular-simple-logger.js   --> angular simple logger library
+        angular-ui-router.js       
         app.js                     --> application
         controllers.js             --> application controllers
         directives.js              --> application directives
@@ -51,8 +52,8 @@ Run: http-server $dir
         lodash.min.js.js           --> lodash/underscore minified library
         services.js                --> custom angular services
       partials/                  --> angular view partials (partial html templates)
-        partial1.html
-        partial2.html
+        state1.html
+        state2.html
       templates/
         apartment_data_template    --> template for apartment list directive
     data/
