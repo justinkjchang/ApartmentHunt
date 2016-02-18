@@ -41,3 +41,7 @@
   text-decoration: none;
   color: #999;
 }
+
+.angular-google-map-container { 
+  height: 400px; 
+}

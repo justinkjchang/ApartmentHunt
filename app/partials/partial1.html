@@ -1,10 +1,12 @@
-<p>This is the partial for view 1.</p>
 <div class="row">
-	<div class="col-md-8">
-		<h3>Map</h3>
-		<p>Selected item is: {{ currApartment.Address }}</p>
+	<div class="col-md-9">
+		<p>Selected item is: {{ currApartment.address }}</p>
+		<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+			<ui-gmap-marker ng-repeat="m in map.markers" coords="m.coords" icon="m.icon" idkey="m.id" events="m.events" clickable="m.clickable"></ui-gmap-marker>
+		</ui-gmap-google-map>
+		
 	</div>
-	<div class="col-md-4">
+	<div class="col-md-3">
 		<!-- custom apartment-data directive with apartments attribute 'apartments' -->
 		<apartment-data apartments='apartments'></apartment-data>
 	</div>

@@ -1,7 +1,7 @@
 <div class="apartment-data">
 	<h3>Apartments List</h3>
-	<p>Selected item is: {{ currApartment.Address }}</p>
-	<select class="form-control" ng-model='currApartment' ng-change='changedValue(currApartment)' ng-options='apartment.Address for apartment in apartments'>
+	<p>Selected item is: {{ currApartment.address }}</p>
+	<select class="form-control" ng-model='currApartment' ng-change='changedValue(currApartment)' ng-options='apartment.name for apartment in apartments'>
 	    <option value="">Select an Apartment</option>
 	</select>
 </div>

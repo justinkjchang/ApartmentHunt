@@ -1,24 +1,46 @@
 { 
 	"Apartments" : [
 		{
-			"Address" : "123 Street",
-			"Price" : "1700"
+			"name" : "Amazon.com",
+			"address" : "440 Terry Ave N, Seattle, WA",
+			"price" : "1700",
+			"starred" : false
 		}, 
 		{
-			"Address" : "321 Street",
-			"Price" : "1500"
+			"name" : "Leilani on Greenwood",
+			"address" : "10215 Greenwood Ave N, Seattle, WA",
+			"price" : "1700",
+			"starred" : false
+		}, 
+		{
+			"name" : "The Mill at First Hill",
+			"address" : "1000 8th Ave., Seattle, WA",
+			"price" : "1700",
+			"starred" : false
 		},
 		{
-			"Address" : "213 Street",
-			"Price" : "1600"
+			"name" : "Stack House",
+			"address" : "1280 Harrison St., Seattle, WA",
+			"price" : "1700",
+			"starred" : false
 		},
 		{
-			"Address" : "222 Street",
-			"Price" : "2000"
+			"name" : "AMLI Mark 24",
+			"address" : "2428 NW Market St., Seattle, WA",
+			"price" : "1700",
+			"starred" : false
 		},
 		{
-			"Address" : "333 Street",
-			"Price" : "2100"
+			"name" : "Verve",
+			"address" : "2720 4th Ave., Seattle, WA",
+			"price" : "1700",
+			"starred" : false
+		},
+		{
+			"name" : "Panorama",
+			"address" : "1100 University St., Seattle, WA",
+			"price" : "1700",
+			"starred" : false
 		}
 	]
 }

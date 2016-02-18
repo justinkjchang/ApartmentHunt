@@ -5,12 +5,34 @@
 var controllers = {};
 
 angular.module('myApp.controllers', [])
-	.controller('MyCtrl1', ['$scope', '$http', 'apartmentFactory', '$rootScope', function($scope, $http, apartmentFactory, $rootScope) {
+	.controller('MyCtrl1', ['$scope', '$http', 'apartmentFactory', '$rootScope', 'uiGmapGoogleMapApi', function($scope, $http, apartmentFactory, $rootScope, uiGmapGoogleMapApi) {
 		$scope.apartments = [];
+		// set default current apartment
+		$scope.currApartment = {
+			address: "Seattle, WA"
+		};
+		$scope.map = { 
+			// set default map location
+			center: { 
+				latitude: 47.6271394, 
+				longitude: -122.3375785
+			}, 
+			zoom: 14,
+			markers: []
+		};
+		
+		// wait to ensure map is loaded (doesn't seem to be doing anything right now)
+		uiGmapGoogleMapApi.then(function(maps) {
+			placeMarker("Amazon.com, Terry Avenue North, Seattle, WA, USA");
+    	});
 
 		// watch for if the current apartment changes
 		$rootScope.$watch('currApartment', function(currApartment) {
 			console.log("new currApartment: " + JSON.stringify(currApartment));
+			if(currApartment) {
+				// place marker on current apartment
+				placeMarker(currApartment);
+			}
 		});
 
 		init();
@@ -22,6 +44,41 @@ angular.module('myApp.controllers', [])
 				$scope.apartments = response.Apartments;
 			}).error(function(response) {
 				alert("Error: " + response.error);
+			});
+		}
+
+		// Place marker on google map
+		function placeMarker(currApartment) {
+			// Convert address to lat/lng
+			var geocoder = new google.maps.Geocoder();
+			geocoder.geocode( { "address": currApartment.address }, function(results, status) {
+				if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
+					console.log("Locations found for address: " + JSON.stringify(results));
+					var location = results[0].geometry.location;
+
+					// create new marker to drop on google map
+					var marker = {
+	                    id: Date.now(),
+	                    coords: {
+	                        latitude: location.lat(),
+	                        longitude: location.lng()
+	                    },
+	                    clickable: true,
+	                    events: {
+	                    	click : function(e) {
+	                    		console.log(e.position.lat() + ":" + e.position.lng());
+	                    	}
+	                    }
+	                };
+
+	                // add marker to list of markers displayed on google map
+	                $scope.map.markers.push(marker);
+
+	                // set center of map to be new currAddress
+					$scope.map.center.latitude = location.lat();
+					$scope.map.center.longitude = location.lng();
+	                $scope.$apply();						 
+				}
 			});
 		}
 	}])
