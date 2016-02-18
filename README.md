@@ -2,14 +2,6 @@
 
 This project is a simple web application that will help visualize the pros and cons of various apartments, including distance to work, rent price per month, sq. ft., etc. It's built using [AngularJS](http://angularjs.org/), and took advantage of [simple angular seed](https://github.com/reinaldo13/simple-angular-seed), which is a basic skeleton for general AngularJS applications.
 
-
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
-You can use it to quickly start your angular webapp projects.
-
-The seed contains a sample AngularJS application. It is all HTML, JS and CSS. It doesn't install anything else in your dev environment, so no dependencies! I did this on purpose so you have control over your web server, test and dev tools, etc.
-
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
 ## Getting Started
 
 Simply clone the ApartmentHunt repository
@@ -28,6 +20,11 @@ You need git to clone the repository. You can get it from
 
 You can either run your app locally or host it using [github pages](https://pages.github.com/)
 
+### Todo
+
+- Migrate from ngRoute to ui-router
+- Show marker address/name on click
+
 #### Note:
 
 Some ajax calls are done with angular, and as a result, the project needs to be hosted on a web server.
@@ -37,23 +34,31 @@ Run: http-server $dir
 
 ## Directory Layout
 
-    app/                --> all of the files to be used in production
-      css/              --> css files
-        app.css         --> default stylesheet
-      img/              --> image files
-      index.html        --> app layout file (the main html template file of the app)
-      js/               --> javascript files
-        app.js          --> application
-        controllers.js  --> application controllers
-        directives.js   --> application directives
-        factories.js    --> application factories
-        filters.js      --> custom angular filters
-        services.js     --> custom angular services
-      partials/             --> angular view partials (partial html templates)
+    app/                       --> all of the files to be used in production
+      css/                       --> css files
+        app.css                    --> default stylesheet
+      img/                       --> image files
+      index.html                 --> app layout file (the main html template file of the app)
+      js/                        --> javascript files
+        angular-google-maps.js     --> angular google maps directive
+        angular-simple-logger.js   --> angular simple logger library
+        app.js                     --> application
+        controllers.js             --> application controllers
+        directives.js              --> application directives
+        factories.js               --> application factories
+        filters.js                 --> custom angular filters
+        lodash.min.js.js           --> lodash/underscore minified library
+        services.js                --> custom angular services
+      partials/                  --> angular view partials (partial html templates)
         partial1.html
         partial2.html
-
-    test/               --> test config and source files (coming soon!)
+      templates/
+        apartment_data_template    --> template for apartment list directive
+    data/
+      apartments.json              --> json data for apartments
+    test/                        --> test config and source files (coming soon!)
+    index.html                   --> redirects to app/index.html
+    favicon.png                  --> favicon
     
 ## Testing
 
