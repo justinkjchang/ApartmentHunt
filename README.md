@@ -39,7 +39,6 @@ Run: http-server $dir
       css/                       --> css files
         app.css                    --> default stylesheet
       img/                       --> image files
-      index.html                 --> app layout file (the main html template file of the app)
       js/                        --> javascript files
         angular-google-maps.js     --> angular google maps directive
         angular-simple-logger.js   --> angular simple logger library
@@ -59,7 +58,7 @@ Run: http-server $dir
     data/
       apartments.json              --> json data for apartments
     test/                        --> test config and source files (coming soon!)
-    index.html                   --> redirects to app/index.html
+    index.html                   --> app layout file (the main html template file of the app)
     favicon.png                  --> favicon
     
 ## Testing

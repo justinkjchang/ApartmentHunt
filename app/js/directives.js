@@ -11,7 +11,7 @@ angular.module('myApp.directives', [])
 	    return {
 	        restrict: 'E', // E = element, A = attribute, C = class, M = comment      
 	        replace: true,   
-	        templateUrl: 'templates/apartment_data_template.html',
+	        templateUrl: 'app/templates/apartment_data_template.html',
 	        scope: {
 	            // @ reads the attribute value, = provides two-way binding, & works with functions
 	            apartments: '=apartments'

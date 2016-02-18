@@ -12,7 +12,7 @@ app.factory('apartmentFactory', function($http) {
 		// // usually make ajax call here to get the data e.g. apartment data
 		var apartments = {};
 
-		return $http.get("/data/apartments.json", {
+		return $http.get("data/apartments.json", {
 			headers: {
                 'Content-Type': 'application/json'
 			},

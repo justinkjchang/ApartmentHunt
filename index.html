@@ -1,6 +1,50 @@
 <!DOCTYPE html>
+<html lang="en" ng-app="myApp">
 <head>
-	<meta http-equiv="refresh" content="0; url=app" />
-	<link rel="shortcut icon" href="/ApartmentHunt/favicon.png" />
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="shortcut icon" href="favicon.png" />
+  <title>Apartment Hunt Visualization</title>
+  <link rel="stylesheet" href="app/css/app.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 </head>
+
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h1>Apartment Hunt Visualization</h1>
+    </div>
+    <ul class="menu">
+      <li><a ui-sref="state1">State 1</a></li>
+      <li><a ui-sref="state2">State 2</a></li>
+    </ul>
+
+    <div ui-view></div>
+
+    <div>Angular seed app: v<span app-version></span></div>
+
+  </div>
+
+  <script src='app/js/lodash.min.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+  <script src='app/js/angular-simple-logger.js'></script>
+  <script src='app/js/angular-google-maps.js'></script>
+  <script src='app/js/angular-ui-router.js'></script>
+  
+  <script src="app/js/app.js"></script>
+  <script src="app/js/services.js"></script>
+  <script src="app/js/factories.js"></script>
+  <script src="app/js/controllers.js"></script>
+  <script src="app/js/filters.js"></script>
+  <script src="app/js/directives.js"></script>
+</body>
+
 </html>

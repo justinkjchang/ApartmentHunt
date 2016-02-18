@@ -18,12 +18,12 @@ var app = angular.module('myApp', [
 	$stateProvider
 		.state('state1', {
 			url: "/state1",
-			templateUrl: "partials/state1.html",
+			templateUrl: "app/partials/state1.html",
 			controller: "MyCtrl1"
 		})
 		.state('state2', {
 			url: "/state2",
-			templateUrl: "partials/state2.html",
+			templateUrl: "app/partials/state2.html",
 			controller: "MyCtrl2"
 		});
 })
