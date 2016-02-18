@@ -11,20 +11,20 @@ angular.module('myApp.controllers', [])
 		$scope.currApartment = {
 			address: "Seattle, WA"
 		};
-		$scope.map = { 
-			// set default map location
-			center: { 
-				latitude: 47.6271394, 
-				longitude: -122.3375785
-			}, 
-			zoom: 14,
-			markers: []
-		};
 		
 		// wait to ensure map is loaded (doesn't seem to be doing anything right now)
 		uiGmapGoogleMapApi.then(function(maps) {
-			placeMarker("Amazon.com, Terry Avenue North, Seattle, WA, USA");
-    	});
+			$scope.map = {
+				control: {},
+				// set default map location
+				center: { 
+					latitude: 47.6271394, 
+					longitude: -122.3375785
+				}, 
+				zoom: 14,
+				markers: []
+			}
+		});
 
 		// watch for if the current apartment changes
 		$rootScope.$watch('currApartment', function(currApartment) {
@@ -68,16 +68,29 @@ angular.module('myApp.controllers', [])
 	                    	click : function(e) {
 	                    		console.log(e.position.lat() + ":" + e.position.lng());
 	                    	}
+	                    },
+	                    lat : function() {
+	                    	return this.coords.latitude;
+	                    },
+	                    lng : function() {
+	                    	return this.coords.longitude;
 	                    }
 	                };
 
 	                // add marker to list of markers displayed on google map
 	                $scope.map.markers.push(marker);
 
+	                var bounds = new google.maps.LatLngBounds();
+	                for (var i in $scope.map.markers) // your marker list here
+    					bounds.extend($scope.map.markers[i]) // your marker position, must be a LatLng instance
+
+    				// get actual map instance and then move to fit all markers
+    				$scope.map.control.getGMap().fitBounds(bounds);
+
 	                // set center of map to be new currAddress
-					$scope.map.center.latitude = location.lat();
-					$scope.map.center.longitude = location.lng();
-	                $scope.$apply();						 
+					// $scope.map.center.latitude = location.lat();
+					// $scope.map.center.longitude = location.lng();
+	                $scope.$apply();
 				}
 			});
 		}
