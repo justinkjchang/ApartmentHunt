@@ -24,6 +24,7 @@ You can either run your app locally or host it using [github pages](https://page
 
 - Migrate from ngRoute to ui-router
 - Show marker address/name on click
+- Add favourites star
 
 #### Note:
 
