@@ -18,7 +18,13 @@ You need git to clone the repository. You can get it from
 
 ### Run the Application
 
-You can either run your app locally or host it using [github pages](https://pages.github.com/)
+You can either run your app locally using i.e. [http-server](https://www.npmjs.com/package/http-server) or host it using [github pages](https://pages.github.com/)
+
+```
+git clone https://github.com/justinkjchang/ApartmentHunt.git
+http-server .
+```
+*Note that we run http-server one directory above the ApartmentHunt directory to match the github-pages directory structure
 
 ### Todo
 
